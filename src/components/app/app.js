@@ -10,17 +10,24 @@ import './app.css';
 
 
 function App(){
+
+    const data =[
+        {name: 'Luna', salary:5000, increase: false},
+        {name: 'Kola', salary:7000, increase: true},
+        {name: 'Dyna', salary:4000, increase: false},
+        {name: 'Runa', salary:9000, increase: false},
+    ];
     return (
-    <div className='app' >
-        <AppInfo/>
-        <div className="search-panel">
-           <SearchPanel/>
-           <AppFilter/>
+        <div className='app' >
+            <AppInfo/>
+            <div className="search-panel">
+            <SearchPanel/>
+            <AppFilter/>
+            </div>
+                <EmploeersList data={data}/>
+                <EmploeersAddForm/>
+        
         </div>
-             <EmploeersList/>
-             <EmploeersAddForm/>
-       
-    </div>
 
     );
 } 
